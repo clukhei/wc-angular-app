@@ -1,0 +1,238 @@
+<div class="d-flex flex-column min-vh-100">
+    <sgds-masthead fluid></sgds-masthead>
+    <div class="grid">
+        <sgds-mainnav>
+            <img width="130" src="https://www.designsystem.tech.gov.sg/assets/img/logo-sgds.svg" slot="brand" />
+            <sgds-mainnav-item href="#">Home</sgds-mainnav-item>
+            <sgds-mainnav-item href="#">About</sgds-mainnav-item>
+            <sgds-mainnav-item href="#" slot="end" class="test test2">Info</sgds-mainnav-item>
+            <sgds-mainnav-item href="#" slot="end">Contact Us</sgds-mainnav-item>
+            <sgds-button slot="end">Login</sgds-button>
+            <dev-console-widget slot="non-collapsible" iconColor="black" iconWidth="28px" iconHeight="28px">
+            </dev-console-widget>
+        </sgds-mainnav>
+        <sgds-sidenav class="mt-3" id="test-id">
+            <sgds-sidenav-item active>
+                <span slot="title">
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-0-circle" viewBox="0 0 16 16">
+                        <path
+                            d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z" />
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z" />
+                    </svg>
+                    Title
+                </span>
+                <sgds-sidenav-link href="https://google.com" active>first-test</sgds-sidenav-link>
+                <sgds-sidenav-link href="https://google.com">first-test</sgds-sidenav-link>
+                <sgds-sidenav-link href="https://google.com">first-test</sgds-sidenav-link>
+            </sgds-sidenav-item>
+            <sgds-sidenav-item>
+                <span slot="title">
+                    <sl-icon name="stack"></sl-icon> Title
+                </span>
+                <sgds-sidenav-link href="https://google.com">first-test</sgds-sidenav-link>
+                <sgds-sidenav-link href="https://google.com">first-test</sgds-sidenav-link>
+                <sgds-sidenav-link href="https://google.com">first-test</sgds-sidenav-link>
+
+            </sgds-sidenav-item>
+        </sgds-sidenav>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <sgds-accordion>
+                        <sgds-accordion-item summary="Toggle Me 1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </sgds-accordion-item>
+                    </sgds-accordion>
+                    <sgds-accordion>
+                        <sgds-accordion-item summary="Toggle Me 2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </sgds-accordion-item>
+                        <sgds-accordion-item summary="Toggle Me 3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </sgds-accordion-item>
+                        <sgds-accordion-item summary="Toggle Me 4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </sgds-accordion-item>
+                        <sgds-accordion-item summary="Toggle Me 5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </sgds-accordion-item>
+                    </sgds-accordion>
+                    <h2>Badge</h2>
+                    <div class="row">
+                        <sgds-badge variant="danger">
+                            Testing
+                            <i slot="rightIcon" class="bi bi-apple"></i>
+                            <i slot="leftIcon" class="bi bi-123"></i>
+                        </sgds-badge>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <sgds-footer description="this is a prop description" title="Singapore Government Design System"
+        lastUpdatedDate="08 Feb 2022" links='[
+        {
+            "title": "Column 1",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 2",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 3",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 4",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 5",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 6",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        },
+        {
+            "title": "Column 6",
+            "links" : [
+                {
+                    "href": "#1",
+                    "label": "About Us"
+                },
+                {
+                    "href": "#2",
+                    "label": "This is a super long link"
+                },
+                {
+                    "href": "#3",
+                    "label": "Test"
+                },
+                {
+                    "href": "#4",
+                    "label": "Test"
+                }
+            ]
+        }
+      ]'>
+    </sgds-footer>
