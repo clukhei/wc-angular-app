@@ -1,27 +1,100 @@
-# SgdsWcAngularApp
+# Angular and Sgds web components workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## Web components
 
-## Development server
+- History of web components?
+  In 2011, Web Components were introduced for the first time by Alex Russell at Fronteers Conference.[14]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In 2013, Polymer, a library based on Web Components was released by Google.[15]
 
-## Code scaffolding
+In 2017, Ionic (mobile app framework) team built StencilJS, a JavaScript compiler that generates Web Components.[16]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In 2018, Angular 6 introduced Angular Elements that lets you package your Angular components as custom web elements, which are part of the web components set of web platform APIs.
 
-## Build
+In 2018, Firefox 63 enabled Web Components support by default and updated the developer tools to support them.[17]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+In 2018, Lit Element was developed by the Google Chrome team as part of larger Polymer project. Lit Element was designed to be a lightweight and easy-to-use framework for
+creating web components.
 
-## Running unit tests
+In 2020: Chromium Microsoft Edge
+https://caniuse.com/?search=web%20components
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- What defines a Web component
 
-## Running end-to-end tests
+1. Custom elements
+   - Custom Elements. Quite simply, these are fully-valid HTML elements with custom templates, behaviors and tag names (e.g. <one-dialog>) made with a set of JavaScript APIs. Custom Elements are defined in the HTML Living Standard specification.
+2. Shadow DOM
+   - encapsulation for both markup and styles.
+3. HTML templates
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Demo on Shadow Dom and Light Dom
 
-## Further help
+- Cannot query elements in the shadowdom: document.querySelector("div[variant=card-action]")
+- Can query elements in the light dom: document.querySelector("span[slot=card-subtitle]")
+- Can query elements if you use shadow dom api : document.querySelector("sgds-action-card[type=radio]").shadowRoot.querySelector("div[variant=card-action]")
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Can style light doms
+
+  ```css
+  span[slot="card-subtitle"] {
+    color: red;
+  }
+  ```
+
+- Cannot style shadow doms
+
+```css
+p.card-text {
+  color: red;
+}
+```
+
+# Content projection : <slot></slot> vs <ng-content>
+
+## Angular
+
+```html
+<h2>Multi-slot content projection</h2>
+
+Default:
+<ng-content></ng-content>
+
+Question:
+<ng-content select="[question]"></ng-content>
+`
+```
+
+Usage:
+
+```html
+<app-zippy-multislot>
+  <p question>Is content projection cool?</p>
+  <p>Let's learn about content projection!</p>
+</app-zippy-multislot>
+```
+
+## Web components
+
+```html
+<sgds-button>
+  <slot></slot>
+  <slot name="icon"></slot>
+</sgds-button>
+```
+
+Usage:
+
+```html
+<sgds-button> Hello <span slot="icon">mock icon</span></sgds-button>
+```
+
+
+# Events 
+
+# Attribute binding
+
+# Styling 
+
+# Form 
+
+# 

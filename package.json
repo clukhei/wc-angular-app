@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "@govtechsg/sgds-web-component": "^0.0.12",
+    "@govtechsg/sgds-web-component": "^0.0.13",
     "@types/bootstrap": "^5.2.6",
     "clk-web-components": "^0.0.20",
     "rxjs": "~7.8.0",
