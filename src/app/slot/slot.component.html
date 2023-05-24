@@ -1,1 +1,26 @@
-<p>slot works!</p>
+<div class="container">
+    <sgds-sidenav class="mt-3" id="test-id" alwaysOpen >
+        <sgds-sidenav-item active (sgds-toggle)="handleToggle()">
+            <!-- add an icon slot here -->
+            <span slot="title">
+                Navigation
+            </span>
+            <sgds-sidenav-link href="https://google.com">Google</sgds-sidenav-link>
+            <sgds-sidenav-link href="/home" [active]="(url === '/home')">Home</sgds-sidenav-link>
+            <sgds-sidenav-link href="/slot" [active]="(url === '/slot')">Slot</sgds-sidenav-link>
+            <sgds-sidenav-link href="/event" [active]="(url === '/event')">Event</sgds-sidenav-link>
+            <sgds-sidenav-link href="/home" [active]="(url === '/home')">Styling</sgds-sidenav-link>
+        </sgds-sidenav-item>
+        <sgds-sidenav-item>
+            <span slot="title">
+                 Title
+            </span>
+            <sgds-sidenav-link href="https://google.com">Link 1</sgds-sidenav-link>
+            <sgds-sidenav-link href="https://google.com">Link 2</sgds-sidenav-link>
+            <sgds-sidenav-link href="https://google.com">Link 3</sgds-sidenav-link>
+        </sgds-sidenav-item>
+        <sgds-sidenav-item href="#"><span slot="title">Just a link</span></sgds-sidenav-item>
+    </sgds-sidenav>
+</div>
+
+<!-- Do CSS variable stylings  -->

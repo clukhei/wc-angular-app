@@ -26,12 +26,30 @@ sgds-footer {
   grid-area: footer;
 }
 
+/* add css parts example*/
+
+
+/* add css custom properties */
+
+
+/* styling the light dom?? */
+
+sgds-mainnav-item {
+  background-color: wheat;
+}
+
 /* css parts e.g */
 /* sgds-footer::part(footer-bottom) {
-    background-color: red;
+    background-color: grey;
+    font-family:'Times New Roman', Times, serif;
+    border: 10px dotted red
 } */
 
 /* css custom properties e.g. */
 /* sgds-masthead {
     --masthead-text-color : pink;
+} */
+
+/* sgds-sidenav {
+  --sidenav-theme-color	: pink;
 } */

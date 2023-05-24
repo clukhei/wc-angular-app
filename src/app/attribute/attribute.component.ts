@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AttributeComponent {
 
   email: string = ''
-  
+ 
   handleInputChange(e: Event) {
     console.log('sgds-input', e)
     this.email = (e.target as HTMLInputElement).value
