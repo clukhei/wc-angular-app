@@ -81,6 +81,12 @@
                             <i slot="leftIcon" class="bi bi-123"></i>
                         </sgds-badge>
                     </div>
+                    <div class="row">
+                        <sgds-stepper #stepper [activeStep]="activeStep" [steps]="stepMetadata" (sgds-arrived)="updateActiveStep()"></sgds-stepper>
+                        <button (click)="nextStep()">next</button>
+                        <button (click)="prevStep()">prev]</button>
+                    </div>
+                    <ng-template adHost></ng-template>
                 </div>
             </div>
         </main>
