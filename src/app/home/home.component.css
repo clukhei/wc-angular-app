@@ -39,17 +39,17 @@ sgds-mainnav-item {
 }
 
 /* css parts e.g */
-/* sgds-footer::part(footer-bottom) {
+sgds-footer::part(footer-bottom) {
     background-color: grey;
     font-family:'Times New Roman', Times, serif;
     border: 10px dotted red
-} */
+}
 
 /* css custom properties e.g. */
 /* sgds-masthead {
     --masthead-text-color : pink;
 } */
 
-/* sgds-sidenav {
+sgds-sidenav {
   --sidenav-theme-color	: pink;
-} */
+}
