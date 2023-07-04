@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { SlotComponent } from './slot/slot.component'
-import { AdDirective } from './ad.directive';
+import { StepperDirective } from './stepper.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { AdDirective } from './ad.directive';
     EventsComponent,
     AttributeComponent,
     SlotComponent,
-    AdDirective
+    StepperDirective
   ],
   imports: [
     BrowserModule,

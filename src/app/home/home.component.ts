@@ -1,8 +1,8 @@
 import { Component, ElementRef, Input, SimpleChange, Type, ViewChild } from '@angular/core';
 import { SgdsStepper } from 'clk-web-components';
 import { AttributeComponent } from '../attribute/attribute.component';
-import { AdDirective } from '../ad.directive';
-import { AdItem } from '../ad-item';
+import { StepperDirective } from '../stepper.directive';
+import { StepperItem } from '../stepper-item';
 import { EventsComponent } from '../events/events.component';
 import { SlotComponent } from '../slot/slot.component';
 
@@ -14,7 +14,7 @@ import { SlotComponent } from '../slot/slot.component';
 export class HomeComponent {
   @ViewChild('stepper')
   stepper?: ElementRef<SgdsStepper>;
-  ads: AdItem[] = [
+  stepMetadata: StepperItem[] = [
     {
       stepHeader: 'Personal Details',
       component: AttributeComponent,
@@ -29,26 +29,25 @@ export class HomeComponent {
     },
   ];
  @Input() activeStep: number = 0;
-  @ViewChild(AdDirective, { static: true }) adHost!: AdDirective;
+  @ViewChild(StepperDirective, { static: true }) stepperComponentHost!: StepperDirective;
 
   ngOnInit(): void {
     this.loadComponent();
-
   }
-
-  ngOnChanges(changes: SimpleChange) {
-    // changes.prop contains the old and the new value...
-    this.loadComponent();
+  details = {
+    email: "test",
   }
 
   loadComponent() {
-    const adItem = this.ads[this.activeStep];
-    const viewContainerRef = this.adHost.viewContainerRef;
+    const stepComponent = this.stepMetadata[this.activeStep];
+    const viewContainerRef = this.stepperComponentHost.viewContainerRef;
     viewContainerRef.clear();
 
-    viewContainerRef.createComponent(adItem.component);
+    const componentRef = viewContainerRef.createComponent(stepComponent.component);
+    const component = (componentRef.instance as AttributeComponent)
+    component.newInputEvent.subscribe(e=> this.details.email = e)
+    component.email = this.details.email
   }
-  component = null;
   updateActiveStep() {
     this.activeStep = this.stepper?.nativeElement.activeStep!
     this.loadComponent();
@@ -62,18 +61,4 @@ export class HomeComponent {
     this.stepper?.nativeElement.previousStep();
     this.updateActiveStep()
   }
-  stepMetadata = [
-    {
-      stepHeader: 'Personal Details',
-      component: AttributeComponent,
-    },
-    {
-      stepHeader: 'Address and Contact Information',
-      component: EventsComponent,
-    },
-    {
-      stepHeader: 'Review',
-      component: SlotComponent,
-    },
-  ];
 }

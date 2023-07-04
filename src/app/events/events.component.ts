@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-events',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
+
+  @Output() newInputEvent = new EventEmitter<string>();
 
   handleInputChange(e: Event) {
     console.log('sgds-input', e)

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-attribute',
@@ -6,13 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./attribute.component.css']
 })
 export class AttributeComponent {
-
-  email: string = ''
  
-  handleInputChange(e: Event) {
-    console.log('sgds-input', e)
-    this.email = (e.target as HTMLInputElement).value
-  }
+
+ @Input() email = ""
+ @Output() newInputEvent = new EventEmitter<string>();
+
+ handleInputChange(e: Event) {
+  this.newInputEvent.emit((e.target as HTMLInputElement).value);
+}
+ 
+  // handleInputChange(e: Event) {
+  //   console.log('sgds-input', e)
+  //   this.email = (e.target as HTMLInputElement).value
+  // }
   handleSgdsFocus(e: Event){
     console.log("sgds focus", e)
 

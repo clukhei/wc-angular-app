@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,8 @@ export class SlotComponent {
     console.log(this.router.url)
     this.url = this.router.url
   }
+  @Output() newInputEvent = new EventEmitter<string>();
+
   handleToggle () {
     console.log('side effect action on toggle ')
   }

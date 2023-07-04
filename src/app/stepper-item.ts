@@ -1,5 +1,5 @@
 import { Type } from '@angular/core';
 
-export class AdItem {
+export class StepperItem {
   constructor(public component: Type<any>, public stepHeader: string) {}
 }
